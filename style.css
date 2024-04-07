@@ -1,0 +1,231 @@
+html {
+  color: #fff;
+  scroll-behavior: smooth;
+}
+:root {
+  font-size: 62.5%;
+}
+body {
+  background-color: #282828;
+  font-family: "Poppins", sans-serif;
+  margin: 0 auto;
+  max-width: 112rem;
+  background: linear-gradient(150deg, #000, #9e00ff);
+  background-size: 120% 120%;
+}
+.cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 1.5rem;
+}
+.cabecalho .logo {
+  width: 6.5rem;
+  height: 6.5rem;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  text-decoration: underline;
+  text-align: center;
+  line-height: 5.5rem;
+  font-family: "Raleway", sans-serif;
+  font-size: 3.5rem;
+  transition: 0.2s;
+}
+.cabecalho a:hover .logo {
+  color: #9443d8;
+  border: 2px solid #9443d8;
+}
+.cabecalho .menu li a {
+  font-size: 2rem;
+  text-transform: capitalize;
+  padding: 1rem 2rem;
+  transition: 0.2s;
+}
+.cabecalho .menu li a:hover {
+  background-color: #9443d8;
+  color: #fff;
+  border-radius: 5rem;
+}
+.home {
+  display: flex;
+  min-height: calc(100vh - 12.5rem);
+  align-items: center;
+  gap: 5rem;
+  font-size: 2rem;
+  justify-content: space-between;
+}
+.home p {
+  font-size: 1.6rem;
+}
+.home .informacoes {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  letter-spacing: 0.1rem;
+  padding: 0 1.5rem;
+  max-width: 50%;
+}
+.home .informacoes h1 {
+  font-family: "Raleway", sans-serif;
+  font-size: 4.5rem;
+  margin-bottom: 2rem;
+}
+.home .informacoes p {
+  font-family: "Raleway", sans-serif;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+.home .redes-sociais {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.home .redes-sociais a i {
+  border: 1px solid #fff;
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+  padding: 1rem;
+  text-align: center;
+  font-size: 2.6rem;
+  transition: 0.2s;
+}
+.home .redes-sociais a i:hover {
+  color: #9443d8;
+  border: 1px solid #9443d8;
+  transform: scale(1.1);
+}
+.home .container-foto .foto {
+  border-radius: 50%;
+  max-width: 45rem;
+}
+.home .container-foto img{
+  width: 100%;
+  border-radius: 50%;
+}
+.home .foto.sombra-interna {
+  background: linear-gradient(to right, #8A35C8, #18C063, #00EEA2);
+  background-size: 180% 180%;
+  animation: gradient-animation 5s ease infinite;
+}
+.projetos {
+  padding: 7rem 0;
+}
+.projetos .titulo {
+  text-align: center;
+  padding: 6rem 0;
+  font-size: 4.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.projetos .container-projetos {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  justify-content: center;
+}
+.projetos .projeto {
+  max-width: 26rem;
+  max-height: 50rem;
+  position: relative;
+  display: none;
+}
+.projetos .projeto.ativo {
+  display: block;
+}
+.projetos .projeto img {
+  height: 100%;
+}
+.projetos .projeto h3 {
+  background-color: #040203;
+  width: 100%;
+  padding-left: 2rem;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  position: absolute;
+  bottom: 0;
+}
+.projetos .container-projetos .projeto .informacoes-projeto {
+  background-color: #040203;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  font-weight: 600;
+  opacity: 0;
+  transition: 0.3s;
+  padding: 2rem;
+}
+.projetos .container-projetos .projeto:hover .informacoes-projeto{
+  opacity: 0.7;
+  background-color: #000;
+}
+.projetos .btn-mostrar-projetos {
+  background: none;
+  border: 1px solid #fff;
+  border-radius: 1.5rem;
+  color: #fff;
+  width: 18rem;
+  padding: 2rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.projetos .btn-mostrar-projetos:hover {
+  background-color: #9443d8;
+  transition: 0.3s;
+}
+.projetos .btn-mostrar-projetos.remover {
+  display: none;
+}
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@media(max-width: 1280px) {
+  .cabecalho {
+    padding: 3rem;
+  }
+  .home {
+    flex-direction: column;
+    align-items: center;
+    margin: 5rem 0;
+    gap: 3rem;
+  }
+  .home .informacoes {
+    max-width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+  .projetos .container-projetos {
+    padding: 0 3rem;
+  }
+
+}
+@media (max-width: 425px) {
+  .home .informacoes h1 {
+    font-size: 3rem;
+  }
+  .home .informacoes p {
+    font-size: 1.6rem;
+  }
+  .home .container-foto img {
+    max-width: 32rem;
+  }
+  .projetos {
+    padding: 3rem;
+  }
+}
