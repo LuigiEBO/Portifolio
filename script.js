@@ -6,7 +6,6 @@ buttonSeeProjects.addEventListener('click', () => {
   showButton()
 })
 
-
 function showButton () {
   buttonSeeProjects.classList.add('remover')
 }
