@@ -159,7 +159,8 @@ body {
 .informacoes-projeto p {
   margin-bottom: 2rem;
 }
-.projetos .container-projetos .projeto:hover .informacoes-projeto{
+.projetos .container-projetos .projeto:hover .informacoes-projeto,
+.projetos .container-projetos .projeto .informacoes-projeto.mobile-ativo{
   opacity: 0.7;
   background-color: #000;
 }
